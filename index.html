@@ -3,88 +3,513 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retirement Portfolio | Director of Official Language</title>
+    <title>के. पी. सत्यानंदन | सेवानिवृत्त निदेशक (राजभाषा) - भारतीय रेल</title>
+    <!-- Google Fonts: Noto Serif Devanagari for elegant Hindi and Poppins for clean English -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+        /* CSS Reset & Base Styles */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            color: #333;
+        }
+        body {
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
             background-color: #f4f6f9;
         }
+        
+        /* Language-specific typography */
+        .hindi-text {
+            font-family: 'Noto Serif Devanagari', serif;
+            font-weight: 400;
+        }
+        .hindi-title {
+            font-family: 'Noto Serif Devanagari', serif;
+            font-weight: 700;
+        }
+
+        /* Header / Hero Section */
         header {
-            background: #002b49; /* Deep railway blue */
+            background: linear-gradient(135deg, #002b49 0%, #001f35 100%); /* Deep railway blue */
             color: #ffffff;
-            padding: 3rem 2rem;
-            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+            border-bottom: 5px solid #ffc107; /* Gold border */
         }
-        header h1 {
-            margin: 0;
+        
+        .hero-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .header-selfie-wrapper {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            padding: 5px;
+            background: linear-gradient(45deg, #ffc107, #fff);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .header-selfie {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            background-color: #eee;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .hero-container {
+                text-align: center;
+                flex-direction: column;
+            }
+            .hero-text {
+                text-align: center;
+            }
+        }
+
+        .hero-text h1 {
             font-size: 2.5rem;
+            margin-bottom: 0.2rem;
+            letter-spacing: 1px;
+            color: #ffffff;
         }
-        header p {
-            font-size: 1.2rem;
-            margin: 0.5rem 0 0 0;
-            color: #ffc107; /* Gold accent */
+
+        .hero-text h2 {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: #ffc107; /* Golden accent */
+            letter-spacing: 1px;
         }
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 2rem;
+
+        .hero-text .title-sub {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
         }
+        
+        .hero-text .title-hindi {
+            font-size: 1.1rem;
+            color: #ffc107;
+        }
+
+        /* Two Column Content Layout */
+        .main-layout {
+            max-width: 1140px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 2.2fr 1fr;
+            gap: 2.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Cards & Content Blocks */
         .card {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2.5rem;
+            border-left: 4px solid #002b49;
+            transition: transform 0.2s;
         }
-        h2 {
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        h2.section-title {
             color: #002b49;
-            border-bottom: 2px solid #ffc107;
-            padding-bottom: 0.3rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 0.6rem;
         }
-        .footer {
-            text-align: center;
+
+        h2.section-title i {
+            color: #ffc107;
+        }
+
+        /* Book Section Flex */
+        .book-flex {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            margin-top: 1.5rem;
+        }
+
+        .book-img-wrapper {
+            flex: 0 0 180px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            background-color: #fafafa;
+        }
+
+        .book-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .book-details {
+            flex: 1;
+        }
+
+        .book-details h3 {
+            color: #002b49;
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: 600px) {
+            .book-flex {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .book-img-wrapper {
+                flex: 0 0 auto;
+                width: 160px;
+            }
+        }
+
+        /* Timeline Style for Experience */
+        .timeline {
+            list-style: none;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            height: 95%;
+            width: 2px;
+            background-color: #002b49;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -29px;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ffc107;
+            border: 2px solid #002b49;
+        }
+
+        .timeline-item strong {
+            color: #002b49;
+        }
+
+        /* Awards grid */
+        .awards-list {
+            list-style: none;
+        }
+
+        .awards-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .awards-list li i {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: #ffc107;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-widget {
+            background: #ffffff;
             padding: 2rem;
-            color: #777;
-            font-size: 0.9rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-top: 4px solid #ffc107;
+        }
+
+        .sidebar-widget h3 {
+            color: #002b49;
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        /* TV Image Widget Frame */
+        .tv-image-frame {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            border: 3px solid #002b49;
+            background-color: #000;
+            margin-bottom: 0.8rem;
+        }
+
+        .tv-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .tv-caption {
+            font-size: 0.85rem;
+            text-align: center;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Key-Value Quick Info */
+        .quick-info-list {
+            list-style: none;
+        }
+
+        .quick-info-list li {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            border-bottom: 1px dashed #f0f0f0;
+            padding-bottom: 0.4rem;
+        }
+
+        .quick-info-list li strong {
+            color: #002b49;
+            display: inline-block;
+            width: 120px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #001f35;
+            color: #ffffff;
+            text-align: center;
+            padding: 2.5rem;
+            font-size: 0.95rem;
+            border-top: 4px solid #ffc107;
+            margin-top: 4rem;
+        }
+
+        .footer p {
+            opacity: 0.8;
         }
     </style>
 </head>
 <body>
 
+    <!-- Header Section with Selfie -->
     <header>
-        <h1>KP SATHYANANDAN</h1>
-        <p>Retired Director (Official Language) | Indian Railways</p>
+        <div class="hero-container">
+            <!-- Header selfie using your photo "selfie.jpg" -->
+            <div class="header-selfie-wrapper">
+                <img src="selfie.jpg" alt="के. पी. सत्यानंदन (selfie.jpg)" class="header-selfie">
+            </div>
+            
+            <div class="hero-text">
+                <h1 class="hindi-title">के. पी. सत्यानंदन</h1>
+                <h2>K. P. SATHYANANDAN</h2>
+                <p class="title-sub">Retired Director (Official Language) | Ministry of Railways (Railway Board)</p>
+                <p class="title-hindi hindi-text">पूर्व निदेशक (राजभाषा) | रेल मंत्रालय (रेलवे बोर्ड), नई दिल्ली</p>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
+    <!-- Main Content Area -->
+    <div class="main-layout">
         
-        <div class="card">
-            <h2>परिचय (About Me)</h2>
-            <p>Welcome to my personal portfolio. I am a proud retiree of the Indian Railways, where I served as the Director of Official Language (राजभाषा). Over my career, I dedicated myself to the promotion, implementation, and enrichment of Hindi within the administrative framework of the world's largest railway network.</p>
+        <!-- Left Column: Main Narrative -->
+        <div class="content-left">
+            
+            <!-- Bio / About Section -->
+            <div class="card">
+                <h2 class="section-title hindi-title"><i class="fa-solid fa-user-tie"></i> परिचय (About Me)</h2>
+                <p class="hindi-text" style="font-size: 1.1rem; margin-bottom: 1rem; color: #002b49; font-weight: bold;">
+                    राजभाषा हिंदी की सेवा में समर्पित एक गौरवमयी यात्रा...
+                </p>
+                <p class="hindi-text" style="margin-bottom: 1rem;">
+                    भारतीय रेलवे के रेल मंत्रालय (रेलवे बोर्ड, नई दिल्ली) से सेवानिवृत्त निदेशक (राजभाषा) के रूप में, मैंने राष्ट्रभाषा हिंदी के प्रशासनिक और व्यावहारिक क्रियान्वयन में अपना संपूर्ण जीवन समर्पित किया है। केरल के कण्णूर जिले से आने के कारण, मेरी मातृभाषा मलयालम है, परंतु हिंदी साहित्य के प्रति अगाध प्रेम ने मुझे इस क्षेत्र में विशिष्टता दिलाई। 
+                </p>
+                <p>
+                    With over 34 years of dedicated service in the Central Government, I guided the implementation of India's Official Language policy across various railway zones, managing translations, publications, and fostering a collaborative spirit for administrative Hindi.
+                </p>
+            </div>
+
+            <!-- Published Book Section -->
+            <div class="card">
+                <h2 class="section-title hindi-title"><i class="fa-solid fa-book-open"></i> मेरी पुस्तक (My Publication)</h2>
+                <p class="hindi-text">
+                    प्रशासनिक सेवा के व्यापक अनुभवों और अनुवाद की बारीकियों को भावी पीढ़ी के साथ साझा करने के उद्देश्य से मैंने राजभाषा प्रशासन व अनुवाद विधा पर आधारित पुस्तक का लेखन किया है। यह पुस्तक सैद्धांतिक और व्यावहारिक दोनों दृष्टिकोणों का सटीक संगम प्रस्तुत करती है।
+                </p>
+                
+                <!-- Flex container with book cover and text description -->
+                <div class="book-flex">
+                    <div class="book-img-wrapper">
+                        <img src="bookm.jpg" alt="Book Back Cover - bookm.jpg" class="book-img">
+                    </div>
+                    <div class="book-details">
+                        <h3 class="hindi-title">राजभाषा प्रशासन और अनुवाद विमर्श</h3>
+                        <p class="hindi-text" style="font-size: 0.95rem; margin-bottom: 1rem;">
+                            यह कृति ३४ से अधिक वर्षों के प्रशासनिक सेवाकाल का सार है, जो नव-प्रशिक्षुओं, अनुवादकों और अधिकारियों के लिए एक अनिवार्य मार्गदर्शिका के रूप में कार्य करती है।
+                        </p>
+                        <ul class="quick-info-list" style="font-size: 0.9rem;">
+                            <li><strong>प्रकाशक (Publisher):</strong> जवाहर पुस्तकालय, मथुरा (Jawahar Pustakalay, Mathura)</li>
+                            <li><strong>ISBN:</strong> 978-81-951887-6-5</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Timeline -->
+            <div class="card">
+                <h2 class="section-title hindi-title"><i class="fa-solid fa-briefcase"></i> कार्यानुभव (Service Chronology)</h2>
+                <p class="hindi-text" style="margin-bottom: 1.5rem;">
+                    वर्ष 1985 से आरंभ कर, 34 वर्षों से अधिक समय तक केंद्र सरकार के विभिन्न प्रमुख कार्यालयों में प्रशासनिक और अकादमिक योगदान:
+                </p>
+                <ul class="timeline hindi-text">
+                    <li class="timeline-item">
+                        <strong>प्रारंभिक सेवाएँ:</strong> हिंदी अनुवादक एवं सहायक निदेशक (राजभाषा) के रूप में भाषा सेवा की नींव रखी।
+                    </li>
+                    <li class="timeline-item">
+                        <strong>नेतृत्व पद:</strong> वरिष्ठ राजभाषा अधिकारी, प्रोफेसर (राजभाषा), एवं उप महाप्रबंधक (राजभाषा)।
+                    </li>
+                    <li class="timeline-item">
+                        <strong>शिखर योगदान:</strong> रेल मंत्रालय, रेलवे बोर्ड (नई दिल्ली) में <strong>निदेशक (राजभाषा)</strong> के सर्वोच्च पद पर रहते हुए 22 जनवरी, 2019 को स्वैच्छिक सेवा-निवृत्ति ग्रहण की।
+                    </li>
+                    <li class="timeline-item">
+                        <strong>अतिरिक्त उत्तरदायित्व:</strong> मुंबई एवं सिकंदराबाद-हैदराबाद नगरों में 'नगर राजभाषा कार्यान्वयन समिति' के सदस्य सचिव के रूप में लगातार 08 वर्षों तक महत्वपूर्ण प्रशासनिक भूमिका का संपादन।
+                    </li>
+                    <li class="timeline-item">
+                        <strong>संपादन कार्य:</strong> रेल मंत्रालय की प्रतिष्ठित हिंदी वेब-पत्रिका <strong>'ई-राजभाषा'</strong> का लगातार 7 वर्षों तक सफल संपादन।
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Awards and Recognitions -->
+            <div class="card">
+                <h2 class="section-title hindi-title"><i class="fa-solid fa-award"></i> प्राप्त सम्मान एवं पुरस्कार (Awards)</h2>
+                <ul class="awards-list hindi-text">
+                    <li>
+                        <i class="fa-solid fa-trophy"></i>
+                        <strong>राजभाषा कीर्ति पुरस्कार एवं राजभाषा शील्ड:</strong> निदेशक पद पर रहते हुए वर्ष 2012 से 2018 तक रेल मंत्रालय को लगातार भारत सरकार द्वारा सम्मानित कराया गया।
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-medal"></i>
+                        <strong>'हिंदी भाषा विभूषण पुरस्कार' (2019):</strong> हिंदी साहित्य परिषद, श्रीनाथद्वारा, राजस्थान द्वारा प्रदान किया गया।
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-certificate"></i>
+                        <strong>'राष्ट्रीय हिंदी अकादमी पुरस्कार' (2013):</strong> राष्ट्रीय हिंदी अकादमी (रूपाम्बरा) द्वारा सम्मानित।
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-certificate"></i>
+                        <strong>'राष्ट्रभारती पुरस्कार' (2007):</strong> हैदराबाद में उत्कृष्ट साहित्यिक सेवाओं के लिए सम्मानित।
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-certificate"></i>
+                        <strong>'आशीर्वाद पुरस्कार' (मुंबई):</strong> वर्ष 1994, 1998 एवं 2001 में तीन बार प्राप्त।
+                    </li>
+                </ul>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h2>Career Highlights & Journey</h2>
-            <ul>
-                <li><strong>Leadership:</strong> Guided the implementation of Rajbhasha policies across various railway zones.</li>
-                <li><strong>Literary Contributions:</strong> Supervised the translation, publication, and documentation of official railway manuals and journals.</li>
-                <li><strong>Recognition:</strong> Organized nationwide workshops, seminars, and award ceremonies to encourage the usage of Hindi among railway personnel.</li>
-            </ul>
-        </div>
+        <!-- Right Column: Sidebar (TV Photo, Quick Stats, Contact) -->
+        <div class="sidebar">
+            
+            <!-- TV Appearance Gallery Widget -->
+            <div class="sidebar-widget">
+                <h3 class="hindi-title"><i class="fa-solid fa-tv"></i> मीडिया प्रस्तुति (Broadcasting)</h3>
+                <!-- TV image frame using your photo "tv.jpg" -->
+                <div class="tv-image-frame">
+                    <img src="tv.jpg" alt="K.P. Sathyanandan on TV (tv.jpg)" class="tv-image">
+                </div>
+                <p class="tv-caption hindi-text">दूरदर्शन एवं मीडिया प्रसारणों के माध्यम से राजभाषा नीतियों पर चर्चा</p>
+            </div>
 
-        <div class="card">
-            <h2>Contact & Links</h2>
-            <p>If you would like to connect or discuss literature, language administration, or railway history, feel free to reach out via email at: <strong>sathyanandan.official@gmail.com</strong></p>
+            <!-- Quick Personal Info Profile -->
+            <div class="sidebar-widget">
+                <h3 class="hindi-title"><i class="fa-solid fa-address-card"></i> संक्षिप्त परिचय (Quick Bio)</h3>
+                <ul class="quick-info-list">
+                    <li class="hindi-text"><strong>जन्म तिथि:</strong> 31 मई, 1960</li>
+                    <li class="hindi-text"><strong>जन्म स्थान:</strong> कण्णूर जिला, केरल</li>
+                    <li class="hindi-text"><strong>मातृभाषा:</strong> मलयालम</li>
+                    <li class="hindi-text"><strong>उच्च शिक्षा:</strong> 
+                        <span style="display: block; font-size: 0.9rem; margin-top: 5px;">
+                            • एम.ए. हिंदी & एम.ए. अंग्रेजी<br>
+                            • एम.फिल (केरल विश्वविद्यालय से - <strong>स्वर्ण पदक विजेता</strong>)<br>
+                            • अनुवाद में पी.जी. डिप्लोमा
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Box -->
+            <div class="sidebar-widget">
+                <h3 class="hindi-title"><i class="fa-solid fa-envelope"></i> संपर्क सूत्र (Contact)</h3>
+                <p class="hindi-text" style="font-size: 0.9rem; margin-bottom: 1rem;">
+                    साहित्यिक चर्चा, अनुवाद विमर्श या राजभाषा नीतियों पर विमर्श हेतु सादर आमंत्रित हैं:
+                </p>
+                <ul class="quick-info-list" style="font-size: 0.9rem;">
+                    <li><strong><i class="fa-solid fa-envelope-open-text"></i> ईमेल:</strong> <br><a href="mailto:kpsathyanandan60@gmail.com" style="color: #002b49; text-decoration: none; font-weight: bold;">sathyanandan.official@gmail.com</a></li>
+                    <li class="hindi-text"><strong><i class="fa-solid fa-location-dot"></i> पता:</strong> <br>'सौपर्णिका', उरुवच्चाल पोस्ट,<br>कण्णूर जिला, केरल राज्य<br>पिन - 670 702</li>
+                </ul>
+            </div>
+
         </div>
 
     </div>
 
+    <!-- Footer -->
     <div class="footer">
-        &copy; 2026 | Dedicated to a lifetime of service.
+        <p class="hindi-text">© 2026 के. पी. सत्यानंदन | एक गौरवमयी राष्ट्र सेवा को समर्पित जीवन।</p>
+        <p style="font-size: 0.8rem; margin-top: 5px; opacity: 0.6;">Designed with admiration for your service to the nation.</p>
     </div>
 
 </body>
